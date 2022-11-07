@@ -1,0 +1,104 @@
+.first {
+  background-image: url(./img/pngtree-vector-abstract-perspective-flyer-or-banner-with-white-backgroun-picture-image_984883.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nilvera img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+}
+.nilvera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b646e;
+}
+.item li a:hover {
+  /* font-weight: 600; */
+  transform: scale(1.03);
+  color: #febc3b;
+  transition: all.2s;
+}
+
+.item ul li {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+.item ul li a {
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 1em;
+}
+.item {
+  height: 55px;
+}
+
+.item ul {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.first {
+  background-color: #eef0f8;
+}
+.message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  border-radius: 20px;
+  background-color: #0b646e;
+
+  margin: auto;
+}
+
+.message button {
+  border-radius: 10px;
+  border-color: #0b646e;
+  color: #0b646e;
+  background-color: #dff6f9;
+}
+.message button:hover {
+  border-color: #eef0f8;
+  background-color: #febc3b;
+  color: white;
+}
+div .day-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  gap: 1.5em;
+}
+
+.day-button button {
+  border: 1px solid #0b646e;
+}
+.day-button button:hover {
+  color: white;
+}
+.chart {
+  display: flex;
+}
+.list {
+  width: 100%;
+}
+.list-item {
+  border-bottom: 1px solid #0b646e;
+  display: flex;
+  justify-content: space-between;
+}
+.list-item a:hover {
+  color: gray;
+}
+.list-item a {
+  text-decoration: none;
+  color: #0b646e;
+  line-height: 40px;
+}

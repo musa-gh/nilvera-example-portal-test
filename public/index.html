@@ -1,17 +1,120 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<body class="first">
+  <div id="app">
+    <div class="nilvera">
+      <img src="../src/assets/img/menu_logo.png" alt="menu_logo">
+    </div>
+    <div class="container">
+      <div class="header">
+        <nav class="item">
+          <ul class="ul">
+            <li class="">
+              <a href="#">E-Fatura
+                <i class="fa-solid fa-file-lines fa-1x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">E-Arşiv
+                <i class="fa-sharp fa-solid fa-box-archive fa-1"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">E-İrsaliye
+                <i class="fa-solid fa-truck-fast fa-1x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">E-MM
+                <i class="fa-sharp fa-solid fa-person-digging fa-1x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">E-SMM <i class="fa-solid fa-briefcase fa-1x"></i>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+      <!---BuTTons-->
+      <div class="message mt-3">
+        <div>
+          <button type="button " class="btn btn-outline ">GELEN KUTUSU</button>
+          <button type="button" class="btn btn-outline ">GİDEN KUTUSU</button>
+        </div>
+
+        <div class="day-button">
+          <button type="button" class=" btn  btn-sm">DÜN</button>
+          <button type="button" class="btn  btn-sm">BUGÜN</button>
+          <button type="button" class="btn  btn-sm">BU HAFTA</button>
+          <button type="button" class="btn  btn-sm">BU AY</button>
+        </div>
+      </div>
+      <!--CHART -->
+      <div class="chart mt-3">
+        <div class="chart-img ">
+          <img class="chart-img" src="./img/fc3noor2.png" alt="">
+        </div>
+        <div class="list ">
+          <div class="list-item">
+            <a href="">Temel Fatura </a>
+            <span>0</span>
+          </div>
+
+          <div class="list-item">
+            <a href="">Ticari Fatura </a>
+            <span>0</span>
+          </div>
+
+          <div class="list-item">
+            <a href="">Cevap Bekleyen Ticari Fatura </a>
+            <span>0</span>
+          </div>
+          <div class="list-item">
+            <a href="">Kabul Edilen Fatura </a>
+            <span>0</span>
+          </div>
+
+          <div class="list-item">
+            <a href="">Reddedilen Fatura </a>
+            <span>0</span>
+          </div>
+          <div class="list-item">
+            <a href="">Başarılı Fatura </a>
+            <span>0</span>
+          </div>
+
+          <div class="list-item">
+            <a href="">Hatalı Fatura </a>
+            <span>0</span>
+          </div>
+
+
+          <div class="list-item">
+            <a href="">İşlem Bekleyen Fatura </a>
+            <span>0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
