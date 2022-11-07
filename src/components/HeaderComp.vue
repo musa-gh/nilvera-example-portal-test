@@ -37,12 +37,4 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, iste velit! Tenetur illo, veritatis hic asperiores sint fugit deleniti vitae alias debitis, voluptatibus repudiandae ad sunt, ullam eaque rerum similique! ",
-    };
-  },
-};
-</script>
+<script></script>
