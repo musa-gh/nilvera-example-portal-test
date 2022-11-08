@@ -75,7 +75,7 @@ div .day-button {
   display: flex;
   align-items: flex-end;
   justify-content: end;
-  gap: 1.3em;
+  gap: 0.5em;
 }
 div .day-button button {
   background-color: rgb(233, 233, 233);
@@ -89,12 +89,13 @@ div .day-button button {
   display: flex;
 }
 .list {
-  width: 50%;
+  width: 100%;
 }
 .list-item:hover {
   background-color: rgb(233, 233, 233);
 }
 .list-item {
+  cursor: pointer;
   border-bottom: 1px solid #0b646e;
   display: flex;
   justify-content: space-between;

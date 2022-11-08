@@ -3,20 +3,20 @@
     <canvas ref="doughnut"> </canvas>
   </div>
 </template>
-
 <script>
 import Chart from "chart.js/auto";
 
-// */ FATURA
+////////////////MOBİLE///////////////
 
+///////////WhatsAppp////////////
 const data = {
-  labels: ["GELEN FATURA", "GİDEN FATURA"],
+  labels: ["WhatsApp"],
   datasets: [
     {
       label: "Dataset 1",
-      data: [1, 2],
-      backgroundColor: ["#D61C4E", "#541690"],
-      borderColor: ["#00000"],
+      data: [1],
+      backgroundColor: ["#277BC0 "],
+      //   borderColor: ["#00000"],
       borderWidth: 1,
       cutOut: "90%",
       borderRedius: 30,
