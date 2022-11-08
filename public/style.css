@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Hubballi&family=Poppins&display=swap");
+
 .first {
-  background-image: url(./img/pngtree-vector-abstract-perspective-flyer-or-banner-with-white-backgroun-picture-image_984883.jpg);
+  /* background-image: url(./img/pngtree-vector-abstract-perspective-flyer-or-banner-with-white-backgroun-picture-image_984883.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #373747;
+  font-family: "Poppins", sans-serif;
 }
 .nilvera img {
   background-repeat: no-repeat;
@@ -33,6 +36,7 @@
   justify-content: center;
   display: flex;
   gap: 1em;
+  font-size: 1.2rem;
 }
 .item {
   height: 55px;

@@ -2,8 +2,12 @@
   <div>
     <div class="message mt-3">
       <div>
-        <button type="button" class="btn btn-outline">GELEN KUTUSU</button>
-        <button type="button" class="btn btn-outline">GİDEN KUTUSU</button>
+        <button type="button" class="btn btn-outline btn-sm">
+          GELEN KUTUSU
+        </button>
+        <button type="button" class="btn btn-outline btn-sm">
+          GİDEN KUTUSU
+        </button>
       </div>
 
       <div class="day-button">
