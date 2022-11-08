@@ -16,7 +16,7 @@ const data = {
       label: "Dataset 1",
       data: [1],
       backgroundColor: ["#277BC0 "],
-      //   borderColor: ["#00000"],
+      // borderColor: ["#00000"],
       borderWidth: 1,
       cutOut: "90%",
       borderRedius: 30,
@@ -33,6 +33,7 @@ const config = {
         position: "bottom",
         display: true,
         labels: {
+          color: "#dadada",
           boxWidth: 7,
           usePointStyle: true,
         },

@@ -7,15 +7,15 @@
 <script>
 import Chart from "chart.js/auto";
 
-// */ FATURA
-
+/////////// FATURA///////////////////
 const data = {
   labels: ["GELEN FATURA", "GİDEN FATURA"],
   datasets: [
     {
       label: "Dataset 1",
       data: [1, 2],
-      backgroundColor: ["#D61C4E", "#541690"],
+      fill: false,
+      backgroundColor: ["#F6F54D", "#CF0A0A"],
       borderColor: ["#00000"],
       borderWidth: 1,
       cutOut: "90%",
@@ -33,6 +33,7 @@ const config = {
         position: "bottom",
         display: true,
         labels: {
+          color: "#dadada",
           boxWidth: 7,
           usePointStyle: true,
         },

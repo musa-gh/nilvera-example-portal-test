@@ -2,7 +2,7 @@
   background-image: url(./img/pngtree-vector-abstract-perspective-flyer-or-banner-with-white-backgroun-picture-image_984883.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #eef0f8;
+  background-color: #373747;
 }
 .nilvera img {
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 }
 .item li a:hover {
   /* font-weight: 600; */
-  transform: scale(1.03);
+  transform: scale(1.22);
   color: #d61c4e;
   transition: all.2s;
 }
@@ -28,7 +28,7 @@
 }
 .item ul li a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -42,7 +42,7 @@
   text-align: center;
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #0b646e;
 }
 
 /* .first {
@@ -63,8 +63,8 @@
 .message button {
   /* border-radius: 10px; */
   /* border-color: #0b646e; */
-  color: #000b0c;
-  background-color: rgb(233, 233, 233);
+  color: #dadada;
+  background-color: #252837;
 }
 .message button:hover {
   /* border-color: #000b0c; */
@@ -78,7 +78,8 @@ div .day-button {
   gap: 0.5em;
 }
 div .day-button button {
-  background-color: rgb(233, 233, 233);
+  background-color: #252837;
+  color: #dadada;
 }
 
 .day-button button:hover {
@@ -92,7 +93,7 @@ div .day-button button {
   width: 100%;
 }
 .list-item:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: #252837;
 }
 .list-item {
   cursor: pointer;
@@ -100,11 +101,14 @@ div .day-button button {
   display: flex;
   justify-content: space-between;
 }
+.list-item span {
+  color: #dadada;
+}
 .list-item a:hover {
   color: gray;
 }
 .list-item a {
   text-decoration: none;
-  color: #0b646e;
+  color: rgb(233, 233, 233);
   line-height: 40px;
 }
