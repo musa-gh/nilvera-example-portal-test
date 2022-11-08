@@ -10,12 +10,12 @@ import Chart from "chart.js/auto";
 
 ///////////WhatsAppp////////////
 const data = {
-  labels: ["WhatsApp"],
+  labels: ["WhatsApp", "Gelen Mesaj"],
   datasets: [
     {
       label: "Dataset 1",
-      data: [1],
-      backgroundColor: ["#277BC0 "],
+      data: [1, 2],
+      backgroundColor: ["#277BC0 ", "#55D8C1"],
       // borderColor: ["#00000"],
       borderWidth: 1,
       cutOut: "90%",
