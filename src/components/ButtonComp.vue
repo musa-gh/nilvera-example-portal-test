@@ -3,18 +3,18 @@
     <div class="message mt-3">
       <div>
         <button
-          @click="active = 'gelen'"
+          @click="comeActive = 'gelen'"
           type="button"
           class="btn btn-outline btn-sm"
-          :class="{ 'button--active': active == 'gelen' }"
+          :class="{ 'come-button--active': comeActive == 'gelen' }"
         >
           GELEN KUTUSU
         </button>
         <button
-          @click="active = 'giden'"
+          @click="comeActive = 'giden'"
           type="button"
           class="btn btn-outline btn-sm"
-          :class="{ 'button--active': active == 'giden' }"
+          :class="{ 'come-button--active': comeActive == 'giden' }"
         >
           GİDEN KUTUSU
         </button>
@@ -61,13 +61,18 @@
 export default {
   data() {
     return {
-      active: "gelen",
+      active: "bugün",
+      comeActive: "giden",
     };
   },
 };
 </script>
 
 <style>
+.come-button--active {
+  background-color: #d61c4e !important;
+  color: white;
+}
 .button--active {
   background-color: #d61c4e !important;
   color: white;

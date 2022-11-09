@@ -15,12 +15,11 @@ const data = {
     {
       label: "Dataset 1",
       data: [1],
-      backgroundColor: ["#50CD89 ", "#008FFB"],
+      backgroundColor: ["#D1512D ", "#153462"],
       hoverOffset: 6,
       borderColor: ["#373747"],
-      borderWidth: 1,
-      cutOut: "90%",
-      borderRedius: 30,
+      borderWidth: 2,
+      borderRadius: 30,
     },
   ],
 };
@@ -28,6 +27,7 @@ const config = {
   type: "doughnut",
   data: data,
   options: {
+    cutout: 90,
     responsive: false,
     plugins: {
       legend: {

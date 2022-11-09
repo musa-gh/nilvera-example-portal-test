@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas ref="doughnut"> </canvas>
+    <canvas class="canvas" ref="doughnut"> </canvas>
   </div>
 </template>
 
@@ -15,12 +15,11 @@ const data = {
       label: "Dataset 1",
       data: [1, 2],
       fill: false,
-      backgroundColor: ["#F6F54D", "#CF0A0A"],
+      backgroundColor: ["#F6F54D", "#4FA095"],
       hoverOffset: 4,
       borderColor: ["#373747"],
-      borderWidth: 1,
-      cutOut: "90%",
-      borderRedius: 30,
+      borderWidth: 6,
+      borderRadius: 30,
     },
   ],
 };
@@ -28,6 +27,7 @@ const config = {
   type: "doughnut",
   data: data,
   options: {
+    cutout: 95,
     responsive: false,
     plugins: {
       legend: {
@@ -53,3 +53,8 @@ export default {
   },
 };
 </script>
+<style>
+.canvas {
+  width: 340px;
+}
+</style>

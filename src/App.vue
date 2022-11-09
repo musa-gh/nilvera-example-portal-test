@@ -37,8 +37,10 @@ export default {
     ListComp,
   },
   async created() {
-    // let response = action.earchive();
-    await action.sale();
+    let res = await action.earchive();
+    console.log(res);
+    let fdata = await action.sale();
+    console.log(fdata);
   },
   // async purchase() {
   //   await action.purchase();

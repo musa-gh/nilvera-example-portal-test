@@ -8,16 +8,16 @@ const config = {
 };
 /*https://apitest.nilvera.com/einvoice/Statistics/Sale?StartDate=2022-11-09T00:00:00.000Z&EndDate=2022-11-09T23:59:00.000Z */
 export const action = {
-  // earchive: async () => {
-  //   await axios
-  //     .get("https://apitest.nilvera.com/earchive/Statistics", config)
-  //     .then((res) => {
-  //       return res.data;
-  //     })
-  //     .catch((err) => {
-  //       throw new Error(err.data);
-  //     });
-  // },
+  earchive: async () => {
+    await axios
+      .get("https://apitest.nilvera.com/earchive/Statistics", config)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        throw new Error(err.data);
+      });
+  },
   sale: async () => {
     await axios
       .get(
@@ -25,27 +25,25 @@ export const action = {
         config
       )
       .then((res) => {
-        console.log(res);
         return res.data;
       })
       .catch((err) => {
         throw new Error(err.data);
       });
   },
-  // purchase: async () => {
-  //   await axios
-  //     .get(
-  //       "https://apitest.nilvera.com/einvoice/Statistics/Purchase?StartDate=2022-11-09T00:00:00.000Z&EndDate=2022-11-09T23:59:00.000Z",
-  //       config
-  //     )
-  //     .then((res) => {
-  //       console.log(res);
-  //       return res.data;
-  //     })
-  //     .catch((err) => {
-  //       throw new Error(err.data);
-  //     });
-  // },
+  purchase: async () => {
+    await axios
+      .get(
+        "https://apitest.nilvera.com/einvoice/Statistics/Purchase?StartDate=2022-11-09T00:00:00.000Z&EndDate=2022-11-09T23:59:00.000Z",
+        config
+      )
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        throw new Error(err.data);
+      });
+  },
 };
 
 export default action;
