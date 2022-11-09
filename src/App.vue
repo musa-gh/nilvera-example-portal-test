@@ -36,13 +36,15 @@ export default {
     ChartComp,
     ListComp,
   },
-  created() {
-    let response = action.earchive();
-    console.log(response);
+  async created() {
+    // let response = action.earchive();
+    await action.sale();
   },
-  saled() {
-    let response = action.sale();
-    console.log(response);
-  },
+  // async purchase() {
+  //   await action.purchase();
+  // },
+  // async earchive() {
+  //   await action.earchive();
+  // },
 };
 </script>
