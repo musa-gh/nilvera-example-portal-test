@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <canvas ref="doughnut"> </canvas>
+  <div class="mobile-chart">
+    <canvas ref="doughnut" width="200px "> </canvas>
   </div>
 </template>
 <script>
@@ -16,9 +16,9 @@ const data = {
       label: "Dataset 1",
       data: [1],
       backgroundColor: ["#D1512D ", "#153462"],
-      hoverOffset: 6,
+      hoverOffset: 10,
       borderColor: ["#373747"],
-      borderWidth: 2,
+      borderWidth: 4,
       borderRadius: 30,
     },
   ],
@@ -27,7 +27,7 @@ const config = {
   type: "doughnut",
   data: data,
   options: {
-    cutout: 90,
+    cutout: 50,
     responsive: false,
     plugins: {
       legend: {
@@ -53,3 +53,9 @@ export default {
   },
 };
 </script>
+<style>
+canvas {
+  background-color: #252837;
+  border-radius: 50px;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="message mt-3">
-      <div>
+      <div class="">
         <button
           @click="comeActive = 'gelen'"
           type="button"

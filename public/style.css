@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Hubballi&family=Poppins&display=swap");
+html {
+  font-size: 70%;
+}
 .first {
   /* background-image: url(./img/pngtree-vector-abstract-perspective-flyer-or-banner-with-white-backgroun-picture-image_984883.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #373747;
   font-family: "Poppins", sans-serif;
+  margin: 0 20rem;
 }
 .nilvera img {
   background-repeat: no-repeat;
@@ -111,5 +115,5 @@ div .day-button button {
 .list-item a {
   text-decoration: none;
   color: rgb(233, 233, 233);
-  line-height: 40px;
+  line-height: 15px;
 }

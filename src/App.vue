@@ -2,21 +2,21 @@
   <div class="container">
     <HeaderComp></HeaderComp>
     <ButtonComp></ButtonComp>
-    <div class="row">
-      <div class="col col-12 col-sm-6 col-md-3">
+    <div class="row d-flex justify-content-center">
+      <div class="col col-12 col-sm-6 col-md-4">
         <ChartComp></ChartComp>
       </div>
-      <div class="col col-12 col-sm-6 col-md-3">
+      <ListComp></ListComp>
+      <div class="col col-12 col-sm-6 col-md-4">
         <MobileComp></MobileComp>
       </div>
-      <div class="col col-12 col-sm-6 col-md-3">
+      <div class="col col-12 col-sm-6 col-md-4">
         <MobileComp></MobileComp>
       </div>
-      <div class="col col-12 col-sm-6 col-md-3">
+      <div class="col col-12 col-sm-6 col-md-4">
         <MobileComp></MobileComp>
       </div>
     </div>
-    <ListComp></ListComp>
   </div>
 </template>
 

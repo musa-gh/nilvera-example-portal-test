@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="canvas-center">
     <canvas class="canvas" ref="doughnut"> </canvas>
   </div>
 </template>
@@ -27,7 +27,7 @@ const config = {
   type: "doughnut",
   data: data,
   options: {
-    cutout: 95,
+    cutout: 45,
     responsive: false,
     plugins: {
       legend: {
@@ -55,6 +55,9 @@ export default {
 </script>
 <style>
 .canvas {
-  width: 340px;
+  width: 230px;
+  background-color: #252837;
+  border-radius: 50px;
+  margin-top: 0.5rem;
 }
 </style>
