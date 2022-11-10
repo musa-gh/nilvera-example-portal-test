@@ -7,7 +7,7 @@
 <script>
 import Chart from "chart.js/auto";
 
-/////////// FATURA///////////////////
+/////////// FATURA ///////////////////
 const data = {
   labels: ["GELEN FATURA", "GİDEN FATURA"],
   datasets: [

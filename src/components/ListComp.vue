@@ -2,21 +2,28 @@
   <div>
     <div class="chart mt-3 d-flex flex-row mb-3">
       <div class="list">
-        <div class="list-item">
+        <div
+          class="list-item"
+          v-for="(item, index) in saledata.filter(
+            (item) => item[0] != 'TotalCount'
+          )"
+          :key="index"
+        >
           <a href="">
             <lord-icon
-              src="https://cdn.lordicon.com/ogkplaef.json"
+              class="lord"
+              :src="`https://cdn.lordicon.com/${icon(item[0])}.json`"
               trigger="hover"
-              colors="primary:#e88c30"
-              style="width: 20px"
+              :colors="`primary:${color(item[0])}`"
+              style="width: 17px"
             >
             </lord-icon
-            >Temel Fatura
+            >{{ title(item[0]) }}
           </a>
-          <span>0</span>
+          <span>{{ item[1] }}</span>
         </div>
-
-        <div class="list-item">
+        <!---->
+        <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/ogkplaef.json"
@@ -28,9 +35,9 @@
             Ticari Fatura
           </a>
           <span>0</span>
-        </div>
+        </div> -->
 
-        <div class="list-item">
+        <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/qmuwmmnl.json"
@@ -55,9 +62,9 @@
             >Kabul Edilen Fatura
           </a>
           <span>0</span>
-        </div>
+        </div> -->
 
-        <div class="list-item">
+        <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/vacmyjrh.json"
@@ -70,8 +77,8 @@
             Reddedilen Fatura
           </a>
           <span>0</span>
-        </div>
-        <div class="list-item">
+        </div> -->
+        <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/jffauosv.json"
@@ -83,9 +90,9 @@
             >Başarılı Fatura
           </a>
           <span>0</span>
-        </div>
+        </div> -->
 
-        <div class="list-item">
+        <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/jfhbogmw.json"
@@ -97,9 +104,9 @@
             >Hatalı Fatura
           </a>
           <span>0</span>
-        </div>
+        </div> -->
 
-        <div class="list-item">
+        <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/nxooksci.json"
@@ -111,9 +118,48 @@
             >İşlem Bekleyen Fatura
           </a>
           <span>0</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  props: {
+    saledata: Array,
+  },
+  methods: {
+    title(eng) {
+      if (eng === "BasicCount") return "Temel Fatura"; //Ad
+      if (eng === "CommercialCount") return "Ticari Fatura";
+      if (eng === "ApprovalPendingCount") return "Cevap Bekleyen Ticari Fatura";
+      if (eng === "ApprovedCount") return "Kabul Edilen Fatura";
+      if (eng === "RejectedCount") return "Reddedilen Fatura";
+      if (eng === "SuccessfullCount") return "Başarılı Fatura";
+      if (eng === "IncorrectCount") return "Hatalı Fatura";
+      if (eng === "PendingCount") return "İşlem Bekleyen Fatura";
+    },
+    icon(title) {
+      if (title === "BasicCount") return "ogkplaef"; // sembol
+      if (title === "CommercialCount") return "ogkplaef";
+      if (title === "ApprovalPendingCount") return "qmuwmmnl";
+      if (title === "ApprovedCount") return "yqzmiobz";
+      if (title === "RejectedCount") return "vacmyjrh";
+      if (title === "SuccessfullCount") return "jffauosv";
+      if (title === "IncorrectCount") return "jfhbogmw";
+      if (title === "PendingCount") return "nxooksci";
+    },
+    color(type) {
+      if (type === "BasicCount") return "#e88c30"; //renk
+      if (type === "CommercialCount") return "#66ee78";
+      if (type === "ApprovalPendingCount") return "#c79816";
+      if (type === "ApprovedCount") return "#109121";
+      if (type === "RejectedCount") return "#e83a30";
+      if (type === "SuccessfullCount") return "#109121";
+      if (type === "IncorrectCount") return "#c71f16";
+      if (type === "PendingCount") return "#4030e8";
+    },
+  },
+};
+</script>
+<style></style>

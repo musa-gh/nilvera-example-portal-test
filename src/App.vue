@@ -6,7 +6,7 @@
       <div class="col col-12 col-sm-6 col-md-4">
         <ChartComp></ChartComp>
       </div>
-      <ListComp></ListComp>
+      <ListComp :saledata="purchase"></ListComp>
 
       <div class="col col-12 col-sm-6 col-md-4">
         <MobileComp></MobileComp>
@@ -42,14 +42,25 @@ export default {
     ListComp,
   },
   async created() {
-    let res = await action.earchive();
+    const res = await action.earchive();
     console.log(res);
-    let fdata = await action.sale();
+    //
+    const purchase = await action.purchase();
+    console.log(purchase);
+    //
+    const fdata = await action.sale();
     console.log(fdata);
+    //
+    this.saledata = Object.entries(fdata);
+    this.purchase = Object.entries(purchase);
   },
-  // async purchase() {
-  //   await action.purchase();
-  // },
+  data() {
+    return {
+      saledata: [],
+      purchase: [],
+    };
+  },
+
   // async earchive() {
   //   await action.earchive();
   // },
