@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-chart">
-    <canvas ref="doughnut" width="180px "></canvas>
+    <canvas ref="doughnut" width="180px "> </canvas>
   </div>
 </template>
 <script>
@@ -8,14 +8,14 @@ import Chart from "chart.js/auto";
 
 ////////////////MOBİLE///////////////
 
-///////////WhatsAppp////////////
+///////////SMS////////////
 const data = {
-  labels: ["WhatsApp"],
+  labels: ["SMS"],
   datasets: [
     {
       label: "Dataset 1",
       data: [1],
-      backgroundColor: ["#3EC250 ", "#153462"],
+      backgroundColor: ["#5F9DF7 ", "#153462"],
       hoverOffset: 10,
       borderColor: ["#373747"],
       borderWidth: 4,
@@ -57,8 +57,5 @@ export default {
 canvas {
   background-color: #252837;
   border-radius: 50px;
-}
-.mobile-chart {
-  padding-left: 4rem;
 }
 </style>

@@ -7,14 +7,15 @@
         <ChartComp></ChartComp>
       </div>
       <ListComp></ListComp>
+
       <div class="col col-12 col-sm-6 col-md-4">
         <MobileComp></MobileComp>
       </div>
       <div class="col col-12 col-sm-6 col-md-4">
-        <MobileComp></MobileComp>
+        <KontorComp></KontorComp>
       </div>
       <div class="col col-12 col-sm-6 col-md-4">
-        <MobileComp></MobileComp>
+        <SmsComp></SmsComp>
       </div>
     </div>
   </div>
@@ -26,6 +27,8 @@ import HeaderComp from "./components/HeaderComp.vue";
 import ButtonComp from "./components/ButtonComp.vue";
 import ListComp from "./components/ListComp.vue";
 import MobileComp from "./components/MobileComp.vue";
+import KontorComp from "./components/KontorComp.vue";
+import SmsComp from "./components/SmsComp.vue";
 import { action } from "@/Axios";
 
 export default {
@@ -33,6 +36,8 @@ export default {
     HeaderComp,
     ButtonComp,
     MobileComp,
+    KontorComp,
+    SmsComp,
     ChartComp,
     ListComp,
   },

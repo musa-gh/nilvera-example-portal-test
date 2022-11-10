@@ -9,7 +9,7 @@ const config = {
 /*https://apitest.nilvera.com/einvoice/Statistics/Sale?StartDate=2022-11-09T00:00:00.000Z&EndDate=2022-11-09T23:59:00.000Z */
 export const action = {
   earchive: async () => {
-    await axios
+    return await axios
       .get("https://apitest.nilvera.com/earchive/Statistics", config)
       .then((res) => {
         return res.data;
@@ -19,7 +19,7 @@ export const action = {
       });
   },
   sale: async () => {
-    await axios
+    return await axios
       .get(
         "https://apitest.nilvera.com/einvoice/Statistics/Sale?StartDate=2022-11-09T00:00:00.000Z&EndDate=2022-11-09T23:59:00.000Z",
         config
