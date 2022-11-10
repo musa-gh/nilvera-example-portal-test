@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Hubballi&family=Poppins&display=swap");
+
 html {
   font-size: 70%;
 }
@@ -113,6 +114,8 @@ div .day-button button {
   color: gray;
 }
 .list-item a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: rgb(233, 233, 233);
   line-height: 15px;
