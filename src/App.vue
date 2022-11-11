@@ -1,22 +1,21 @@
 <template>
-  <div class="container">
+  <div class="container mt-3">
     <HeaderComp></HeaderComp>
     <ButtonComp></ButtonComp>
     <div class="row d-flex justify-content-center">
-      <div class="col col-12 col-sm-6 col-md-4">
+      <div class="chart-size">
         <ChartComp></ChartComp>
+        <ListComp :saledata="purchase"></ListComp>
       </div>
-      <ListComp :saledata="purchase"></ListComp>
 
-      <div class="col col-12 col-sm-6 col-md-4">
-        <MobileComp></MobileComp>
-      </div>
-      <div class="col col-12 col-sm-6 col-md-4">
+      <MobileComp :credit="credit"></MobileComp>
+
+      <!-- <div class="col col-12 col-sm-6 col-md-4">
         <KontorComp></KontorComp>
       </div>
       <div class="col col-12 col-sm-6 col-md-4">
         <SmsComp></SmsComp>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -27,8 +26,8 @@ import HeaderComp from "./components/HeaderComp.vue";
 import ButtonComp from "./components/ButtonComp.vue";
 import ListComp from "./components/ListComp.vue";
 import MobileComp from "./components/MobileComp.vue";
-import KontorComp from "./components/KontorComp.vue";
-import SmsComp from "./components/SmsComp.vue";
+// import KontorComp from "./components/KontorComp.vue";
+// import SmsComp from "./components/SmsComp.vue";
 import { action } from "@/Axios";
 
 export default {
@@ -36,8 +35,6 @@ export default {
     HeaderComp,
     ButtonComp,
     MobileComp,
-    KontorComp,
-    SmsComp,
     ChartComp,
     ListComp,
   },
@@ -51,6 +48,8 @@ export default {
     const fdata = await action.sale();
     console.log(fdata);
     //
+    this.credit = await action.credit();
+    //
     this.saledata = Object.entries(fdata);
     this.purchase = Object.entries(purchase);
   },
@@ -58,6 +57,7 @@ export default {
     return {
       saledata: [],
       purchase: [],
+      credit: [],
     };
   },
 
@@ -66,3 +66,10 @@ export default {
   // },
 };
 </script>
+<style>
+.chart-size {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem 0;
+}
+</style>

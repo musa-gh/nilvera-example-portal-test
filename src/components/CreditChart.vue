@@ -1,21 +1,19 @@
 <template>
-  <div class="mobile-chart">
-    <canvas ref="doughnut" width="180px "> </canvas>
+  <div>
+    <canvas ref="doughnut" width="180px "></canvas>
   </div>
 </template>
+
 <script>
 import Chart from "chart.js/auto";
 
-////////////////MOBİLE///////////////
-
-///////////SMS////////////
 const data = {
-  labels: ["SMS"],
+  labels: ["Kullanılan"],
   datasets: [
     {
       label: "Dataset 1",
       data: [1],
-      backgroundColor: ["#5F9DF7 ", "#153462"],
+      backgroundColor: ["#3EC250 ", "#153462"],
       hoverOffset: 10,
       borderColor: ["#373747"],
       borderWidth: 4,
@@ -46,16 +44,13 @@ const config = {
     },
   },
 };
-
 export default {
+  props: {
+    usage: Number,
+  },
   mounted() {
+    data.datasets[0].data = [this.usage ? this.usage : 1];
     new Chart(this.$refs.doughnut, config);
   },
 };
 </script>
-<style>
-canvas {
-  background-color: #252837;
-  border-radius: 50px;
-}
-</style>

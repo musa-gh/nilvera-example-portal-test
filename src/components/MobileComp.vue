@@ -1,64 +1,58 @@
 <template>
-  <div class="mobile-chart">
-    <canvas ref="doughnut" width="180px "></canvas>
+  <div class="mobil-port">
+    <div v-for="(item, index) in credit" :key="index" class="mobile-chart">
+      <div class="text-center">
+        <h4 class="title">
+          {{ item.Name === "Portal" ? "Kontör" : item.Name }}
+        </h4>
+        <p class="p1">TOPLAM : {{ item.TotalCredit }}</p>
+        <p class="p2">KULLANILAN : {{ item.UsedCredit }}</p>
+      </div>
+      <CreditChart :usage="item.UsedCredit" />
+    </div>
   </div>
 </template>
 <script>
-import Chart from "chart.js/auto";
-
 ////////////////MOBİLE///////////////
 
 ///////////WhatsAppp////////////
-const data = {
-  labels: ["WhatsApp"],
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: [1],
-      backgroundColor: ["#3EC250 ", "#153462"],
-      hoverOffset: 10,
-      borderColor: ["#373747"],
-      borderWidth: 4,
-      borderRadius: 30,
-    },
-  ],
-};
-const config = {
-  type: "doughnut",
-  data: data,
-  options: {
-    cutout: 40,
-    responsive: false,
-    plugins: {
-      legend: {
-        position: "bottom",
-        display: true,
-        labels: {
-          color: "#dadada",
-          boxWidth: 7,
-          usePointStyle: true,
-        },
-      },
-      title: {
-        display: true,
-        // text: "TOPLAM:5",
-      },
-    },
-  },
-};
+
+import CreditChart from "./CreditChart.vue";
 
 export default {
-  mounted() {
-    new Chart(this.$refs.doughnut, config);
+  components: {
+    CreditChart,
+  },
+  props: {
+    credit: Array,
   },
 };
 </script>
 <style>
-canvas {
-  background-color: #252837;
-  border-radius: 50px;
+.title {
+  color: #dadada;
 }
+.p1,
+.p2 {
+  color: #dadada;
+}
+.mobil-port {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.text-center {
+  margin-top: 1rem;
+}
+
 .mobile-chart {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #252837;
+  border-radius: 20px;
+  cursor: pointer;
   padding-left: 4rem;
 }
 </style>

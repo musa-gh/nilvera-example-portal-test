@@ -57,7 +57,7 @@ export default {
 .canvas {
   width: 230px;
   background-color: #252837;
-  border-radius: 50px;
+  border-radius: 20px;
   margin-top: 0.5rem;
 }
 </style>

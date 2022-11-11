@@ -45,6 +45,16 @@ export const action = {
         throw new Error(err.data);
       });
   },
+  credit: async () => {
+    return await axios
+      .get("https://apitest.nilvera.com/general/Credits", config)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        throw new Error(err.data);
+      });
+  },
 };
 
 export default action;

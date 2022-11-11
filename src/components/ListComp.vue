@@ -1,29 +1,27 @@
 <template>
-  <div>
-    <div class="chart mt-3 d-flex flex-row mb-3">
-      <div class="list">
-        <div
-          class="list-item"
-          v-for="(item, index) in saledata.filter(
-            (item) => item[0] != 'TotalCount'
-          )"
-          :key="index"
+  <div class="list">
+    <div
+      class="list-item"
+      v-for="(item, index) in saledata.filter(
+        (item) => item[0] != 'TotalCount'
+      )"
+      :key="index"
+    >
+      <a href="">
+        <lord-icon
+          class="lord"
+          :src="`https://cdn.lordicon.com/${icon(item[0])}.json`"
+          trigger="hover"
+          :colors="`primary:${color(item[0])}`"
+          style="width: 17px"
         >
-          <a href="">
-            <lord-icon
-              class="lord"
-              :src="`https://cdn.lordicon.com/${icon(item[0])}.json`"
-              trigger="hover"
-              :colors="`primary:${color(item[0])}`"
-              style="width: 17px"
-            >
-            </lord-icon
-            >{{ title(item[0]) }}
-          </a>
-          <span>{{ item[1] }}</span>
-        </div>
-        <!---->
-        <!-- <div class="list-item">
+        </lord-icon
+        >{{ title(item[0]) }}
+      </a>
+      <span>{{ item[1] }}</span>
+    </div>
+    <!---->
+    <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/ogkplaef.json"
@@ -37,7 +35,7 @@
           <span>0</span>
         </div> -->
 
-        <!-- <div class="list-item">
+    <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/qmuwmmnl.json"
@@ -64,7 +62,7 @@
           <span>0</span>
         </div> -->
 
-        <!-- <div class="list-item">
+    <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/vacmyjrh.json"
@@ -78,7 +76,7 @@
           </a>
           <span>0</span>
         </div> -->
-        <!-- <div class="list-item">
+    <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/jffauosv.json"
@@ -92,7 +90,7 @@
           <span>0</span>
         </div> -->
 
-        <!-- <div class="list-item">
+    <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/jfhbogmw.json"
@@ -106,7 +104,7 @@
           <span>0</span>
         </div> -->
 
-        <!-- <div class="list-item">
+    <!-- <div class="list-item">
           <a href="">
             <lord-icon
               src="https://cdn.lordicon.com/nxooksci.json"
@@ -119,8 +117,6 @@
           </a>
           <span>0</span>
         </div> -->
-      </div>
-    </div>
   </div>
 </template>
 <script>
