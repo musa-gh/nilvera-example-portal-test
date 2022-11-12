@@ -21,13 +21,11 @@
 </template>
 
 <script>
-import ChartComp from "./components/ChartComp.vue";
 import HeaderComp from "./components/HeaderComp.vue";
+import ChartComp from "./components/ChartComp.vue";
 import ButtonComp from "./components/ButtonComp.vue";
 import ListComp from "./components/ListComp.vue";
 import MobileComp from "./components/MobileComp.vue";
-// import KontorComp from "./components/KontorComp.vue";
-// import SmsComp from "./components/SmsComp.vue";
 import { action } from "@/Axios";
 
 export default {
